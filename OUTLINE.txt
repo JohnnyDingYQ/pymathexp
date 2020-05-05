@@ -1,0 +1,35 @@
+General Outline:
+    - Functions
+        calc(str, **flags): Calculate the expression
+            Return: float (Numerical result of the math expression)
+            Exception......
+
+        to_latex(str): Parse the expression to latex
+            Return: latex (converted latex)
+
+        shunting_yard(str): Convert inflix to Reverse Polish Notation
+            Return: list (list of operands and operators)
+
+        rpn_parse(list): Parse Reverse Polish Notation
+            Return: float (result of calculation)
+
+        is_valid(str): Check if the expression (inflix) is valid
+            Return: bool (valid or not)
+            Exception......
+
+        is_valid_rpn(str): Check if the expression (in rpn) is valid
+            Return: bool (valid or not)
+
+    - "Exp" class
+        __init__(self, text, **flags)
+            text = text
+            answer = calc(text, **flags)
+            is_valid = is_valid(text, **flags)
+
+    - "Op" class
+        __init__(self )
+            name
+            function
+            precedence = -1
+            num_of_operands
+            associativity (left, right, both)
